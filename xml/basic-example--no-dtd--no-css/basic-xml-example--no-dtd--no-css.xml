@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<music-library>
+  <artist name="R.E.M.">
+    <album media="vinyl">
+      <title>Murmur</title>
+      <!-- Note that the image doesn’t work, because a proper interpreter is not built into this project, such as the one included in browsers -->
+      <cover filepath="img/murmur--cover@1x.jpg"
+             width="640"
+             height="480" />
+      <year>1983</year>
+      <track number="1">Radio Free Europe</track>
+      <track number="2">Pilgrimage</track>
+      <track number="3">Laughing</track>
+      <track number="4">Talk About the Passion</track>
+      <track number="5">Moral Kiosk</track>
+      <track number="6">Perfect Circle</track>
+      <track number="7">Catapult</track>
+      <track number="8">Sitting Still</track>
+      <track number="9">9–9</track>
+      <track number="10">Shaking Through</track>
+      <track number="11">We Walk</track>
+      <track number="12">West of the Fields</track>
+    </album>
+    <album media="CD">
+      <title>Automatic for the People</title>
+      <cover filepath="img/automatic-for-the-people--cover@1x.jpg"
+             width="640"
+             height="480" />
+      <year>1992</year>
+      <track number="1">Track 01</track>
+      <track number="2">Track 02</track>
+      <track number="3">Track 03</track>
+      <track number="4">Track 04</track>
+      <track number="5">Track 05</track>
+      <track number="6">Track 06</track>
+      <track number="7">Track 07</track>
+      <track number="8">Track 08</track>
+      <track number="9">Track 09</track>
+      <track number="10">Track 10</track>
+      <track number="11">Track 11</track>
+      <track number="12">Track 12</track>
+    </album>
+  </artist>
+</music-library>
