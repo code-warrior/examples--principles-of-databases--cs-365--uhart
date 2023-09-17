@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,500;1,6..12,200;1,6..12,500&display=swap');
+
+:root,
+h1,
+artist,
+artist::before,
+album {
+  display: block;
+}
+
+:root {
+  margin: 0 auto;
+  width: 1200px;
+  font: 200 16px 'Nunito Sans', serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 24px 0;
+}
+
+artist::before {
+  content: '' attr(name) '';
+  font-size: 2rem;
+}
+
+album {
+  margin: 0 0 24px;
+}
+
+title {
+  margin: 4px 0;
+  font-style: italic;
+  display: inline-block;
+}
+
+year {
+  display: inline-block;
+}
+
+year::before {
+  content: '(';
+}
+
+year::after {
+  content: ')';
+}
+
+track {
+  display: flex;
+}
+
+track::before {
+  content: '' attr(number) ' — ';
+}
+
+track-title {
+  font-weight: 500;
+}
+
+track-title::after {
+  font-weight: 200;
+  content: ', ';
+}
+
+length::after {
+  content: ' | ';
+}
+
+composer::before {
+  content: 'Composed by ';
+}
+
+composer::after {
+  content: ' | ';
+}
