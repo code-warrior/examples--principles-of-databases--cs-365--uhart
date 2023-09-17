@@ -1,0 +1,54 @@
+<!-- ===================================================================
+  The root element: music-library
+
+  The music-library container (root) element must contain one or more
+  artist elements, which is represented by the + metacharacter: one
+  required; unlimited allowed.
+
+  Note: This element may not contain parsed character data (PCDATA) that
+  includes entities, or simple character data (CDATA).
+  ================================================================== -->
+<!ELEMENT music-library (artist)+>
+
+<!-- ===================================================================
+  The artist container element must contain one or more album elements.
+  ================================================================== -->
+<!ELEMENT artist (album)+>
+
+<!-- ===================================================================
+  An album must contain one title, one genre, one cover, one year, and
+  one or more track elements.
+  ================================================================== -->
+<!ELEMENT album       (title,genre,cover,year,track+)>
+<!ELEMENT title       (#PCDATA)>
+<!ELEMENT genre       (#PCDATA)>
+<!ELEMENT cover       EMPTY>
+<!ELEMENT year        (#PCDATA)>
+<!ELEMENT track       (track-title,length,composer,comment)>
+<!ELEMENT track-title (#PCDATA)>
+<!ELEMENT length      (#PCDATA)>
+<!ELEMENT composer    (#PCDATA)>
+<!ELEMENT comment     (#PCDATA)>
+
+<!ATTLIST artist
+          name CDATA #REQUIRED>
+<!ATTLIST album
+          media (vinyl|cassette|cd|mp3|aiff|wav|flac) #REQUIRED>
+
+<!-- ===================================================================
+  Note that the width and height attributes for the cover element are
+  marked #FIXED, followed by the string "640" for width and "480" for
+  height. This means that, if width and/or height were explicitly
+  included as attributes to the cover element, the fixed values must
+  appear as the attribute values. (These fixed strings are also case
+  sensitive, so they must appear exactly as quoted for the XML document
+  to validate.) Either or both attributes may be ommitted without
+  affecting validation.
+  ================================================================== -->
+<!ATTLIST cover
+          filepath CDATA #REQUIRED
+          width    CDATA #FIXED "640"
+          height   CDATA #FIXED "480">
+
+<!ATTLIST track
+          number CDATA #REQUIRED>

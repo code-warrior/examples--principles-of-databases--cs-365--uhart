@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/css" href="../css/style.css"?>
+<!DOCTYPE music-library SYSTEM "../dtd/music-library.dtd" [
+  <!ENTITY pop "Popular Music">
+]>
+<music-library>
+  <artist name="R.E.M.">o
+    <album media="vinyl">
+      <title>Murmur</title>
+      <genre>&pop;</genre>
+      <cover filepath="img/murmur--cover@1x.jpg"
+             width="640"
+             height="480" />
+      <year>1983</year>
+      <track number="1">
+        <track-title>Radio Free Europe</track-title>
+        <length>4:05</length>
+        <composer>Berry/Buck/Mills/Stipe</composer>
+        <comment />
+      </track>
+      <track number="2">
+        <track-title>Pilgrimage</track-title>
+        <length>4:31</length>
+        <composer>Berry/Buck/Mills/Stipe</composer>
+        <comment />
+      </track>
+      <track number="3">
+        <track-title>Laughing</track-title>
+        <length>3:59</length>
+        <composer>Berry/Buck/Mills/Stipe</composer>
+        <comment />
+      </track>
+      <track number="4">
+        <track-title>Talk About the Passion</track-title>
+        <length>3:24</length>
+        <composer>Berry/Buck/Mills/Stipe</composer>
+        <comment />
+      </track>
+      <track number="5">
+        <track-title>Moral Kiosk</track-title>
+        <length>3:33</length>
+        <composer>Berry/Buck/Mills/Stipe</composer>
+        <comment />
+      </track>
+      <track number="6">
+        <track-title>Perfect Circle</track-title>
+        <length>3:31</length>
+        <composer>Berry/Buck/Mills/Stipe</composer>
+        <comment />
+      </track>
+      <track number="7">
+        <track-title>Catapult</track-title>
+        <length>3:56</length>
+        <composer>Berry/Buck/Mills/Stipe</composer>
+        <comment />
+      </track>
+      <track number="8">
+        <track-title>Sitting Still</track-title>
+        <length>3:19</length>
+        <composer>Berry/Buck/Mills/Stipe</composer>
+        <comment />
+      </track>
+      <track number="9">
+        <track-title>9–9</track-title>
+        <length>3:05</length>
+        <composer>Berry/Buck/Mills/Stipe</composer>
+        <comment />
+      </track>
+      <track number="10">
+        <track-title>Shaking Through</track-title>
+        <length>4:30</length>
+        <composer>Berry/Buck/Mills/Stipe</composer>
+        <comment />
+      </track>
+      <track number="11">
+        <track-title>We Walk</track-title>
+        <length>3:01</length>
+        <composer>Berry/Buck/Mills/Stipe</composer>
+        <comment />
+      </track>
+      <track number="12">
+        <track-title>West of the Fields</track-title>
+        <length>3:18</length>
+        <composer>Berry/Buck/Mills/Stipe/Neil Bogan</composer>
+        <comment>It’s rare for Michael Stipe to have asked a third party for help in writing lyrics.</comment>
+      </track>
+    </album>
+
+    <!-- Document -->
+    <album media="vinyl">
+      <title>Document</title>
+      <genre>&pop;</genre>
+      <cover filepath="img/document--cover@1x.jpg"
+             width="640"
+             height="480" />
+      <year>1987</year>
+      <track number="1">
+        <track-title>Finest Worksong</track-title>
+        <length>3:50</length>
+        <composer>Berry/Buck/Mills/Stipe</composer>
+        <comment />
+      </track>
+      <track number="2">
+        <track-title>Welcome to the Occupation</track-title>
+        <length>2:49</length>
+        <composer>Berry/Buck/Mills/Stipe</composer>
+        <comment />
+      </track>
+      <track number="3">
+        <track-title>Exhuming McCarthy</track-title>
+        <length>3:22</length>
+        <composer>Berry/Buck/Mills/Stipe</composer>
+        <comment />
+      </track>
+      <track number="4">
+        <track-title>Disturbance at the Heron House</track-title>
+        <length>3:34</length>
+        <composer>Berry/Buck/Mills/Stipe</composer>
+        <comment />
+      </track>
+      <track number="5">
+        <track-title>Strange</track-title>
+        <length>2:33</length>
+        <composer>Bruce Gilbert/Graham Lewis/Colin Newman/Robert Grey</composer>
+        <comment>Originally recorded by post-punk outfit Wire for their album Pink Flag.</comment>
+      </track>
+      <track number="6">
+        <track-title>It’s the End of the World as We Know it (and I Feel Fine)</track-title>
+        <length>4:07</length>
+        <composer>Berry/Buck/Mills/Stipe</composer>
+        <comment/>
+      </track>
+      <track number="7">
+        <track-title>The One I Love</track-title>
+        <length>3:18</length>
+        <composer>Berry/Buck/Mills/Stipe</composer>
+        <comment/>
+      </track>
+      <track number="8">
+        <track-title>Fireplace</track-title>
+        <length>3:25</length>
+        <composer>Berry/Buck/Mills/Stipe</composer>
+        <comment/>
+      </track>
+      <track number="9">
+        <track-title>Lightnin’ Hopkins</track-title>
+        <length>3:21</length>
+        <composer>Berry/Buck/Mills/Stipe</composer>
+        <comment/>
+      </track>
+      <track number="10">
+        <track-title>King of Birds</track-title>
+        <length>4:10</length>
+        <composer>Berry/Buck/Mills/Stipe</composer>
+        <comment/>
+      </track>
+      <track number="11">
+        <track-title>Oddfellows Local 151</track-title>
+        <length>5:23</length>
+        <composer>Berry/Buck/Mills/Stipe</composer>
+        <comment/>
+      </track>
+    </album>
+  </artist>
+</music-library>
