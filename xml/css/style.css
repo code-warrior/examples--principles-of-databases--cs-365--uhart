@@ -29,6 +29,10 @@ album {
   margin: 0 0 24px;
 }
 
+genre {
+  display: none;
+}
+
 title {
   margin: 4px 0;
   font-style: italic;
