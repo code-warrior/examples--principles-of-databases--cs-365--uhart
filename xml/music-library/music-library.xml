@@ -4,7 +4,7 @@
   <!ENTITY pop "Popular Music">
 ]>
 <music-library>
-  <artist name="R.E.M.">o
+  <artist name="R.E.M.">
     <album media="vinyl">
       <title>Murmur</title>
       <genre>&pop;</genre>
