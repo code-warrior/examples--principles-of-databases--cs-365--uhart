@@ -1,0 +1,171 @@
+{
+  "music-library": [{
+    "artist": {
+      "name": "REM",
+      "album": [{
+        "media": "vinyl",
+        "title": "Murmur",
+        "genre": "Pop",
+        "cover": {
+          "filepath": "img/murmur--cover@1x.jpg",
+          "width": 640,
+          "height": 480
+        },
+        "year": 1983,
+        "track": [{
+          "1": {
+            "track-title": "Radio Free Europe",
+            "length": "4:05",
+            "composer": "Berry/Buck/Mills/Stipe",
+            "comment": ""
+          },
+          "2": {
+            "track-title": "Pilgrimage",
+            "length": "4:31",
+            "composer": "Berry/Buck/Mills/Stipe",
+            "comment": ""
+          },
+          "3": {
+            "track-title": "Laughing",
+            "length": "3:59",
+            "composer": "Berry/Buck/Mills/Stipe",
+            "comment": ""
+          },
+          "4": {
+            "track-title": "Talk About the Passion",
+            "length": "3:24",
+            "composer": "Berry/Buck/Mills/Stipe",
+            "comment": ""
+          },
+          "5": {
+            "track-title": "Moral Kiosk",
+            "length": "3:33",
+            "composer": "Berry/Buck/Mills/Stipe",
+            "comment": ""
+          },
+          "6": {
+            "track-title": "Perfect Circle",
+            "length": "3:31",
+            "composer": "Berry/Buck/Mills/Stipe",
+            "comment": ""
+          },
+          "7": {
+            "track-title": "Catapult",
+            "length": "3:56",
+            "composer": "Berry/Buck/Mills/Stipe",
+            "comment": ""
+          },
+          "8": {
+            "track-title": "Sitting Still",
+            "length": "3:19",
+            "composer": "Berry/Buck/Mills/Stipe",
+            "comment": ""
+          },
+          "9": {
+            "track-title": "9 – 9",
+            "length": "3:05",
+            "composer": "Berry/Buck/Mills/Stipe",
+            "comment": ""
+          },
+          "10": {
+            "track-title": "Shaking Through",
+            "length": "4:30",
+            "composer": "Berry/Buck/Mills/Stipe",
+            "comment": ""
+          },
+          "11": {
+            "track-title": "We Walk",
+            "length": "3:01",
+            "composer": "Berry/Buck/Mills/Stipe",
+            "comment": ""
+          },
+          "12": {
+            "track-title": "West of the Fields",
+            "length": "3:18",
+            "composer": "Berry/Buck/Mills/Stipe/Neil Bogan",
+            "comment": "It’s rare for Michael Stipe to have asked a third party for help in writing lyrics."
+          }
+        }]
+      },
+      {
+        "media": "vinyl",
+        "title": "Document",
+        "genre": "Pop",
+        "cover": {
+          "filepath": "img/document--cover@1x.jpg",
+          "width": 640,
+          "height": 480
+        },
+        "year": 1987,
+        "track": [{
+          "1": {
+            "track-title": "Finest Worksong",
+            "length": "3:50",
+            "composer": "Berry/Buck/Mills/Stipe",
+            "comment": ""
+          },
+          "2": {
+            "track-title": "Welcome to the Occupation",
+            "length": "2:49",
+            "composer": "Berry/Buck/Mills/Stipe",
+            "comment": ""
+          },
+          "3": {
+            "track-title": "Exhuming McCarthy",
+            "length": "3:22",
+            "composer": "Berry/Buck/Mills/Stipe",
+            "comment": ""
+          },
+          "4": {
+            "track-title": "Disturbance at the Heron House",
+            "length": "3:34",
+            "composer": "Berry/Buck/Mills/Stipe",
+            "comment": ""
+          },
+          "5": {
+            "track-title": "Strange",
+            "length": "2:33",
+            "composer": "Bruce Gilbert/Graham Lewis/Colin Newman/Robert Grey",
+            "comment": "Originally recorded by post-punk outfit Wire for their album Pink Flag."
+          },
+          "6": {
+            "track-title": "It’s the End of the World as We Know it (and I Feel Fine)",
+            "length": "4:07",
+            "composer": "Berry/Buck/Mills/Stipe",
+            "comment": ""
+          },
+          "7": {
+            "track-title": "The One I Love",
+            "length": "3:56",
+            "composer": "Berry/Buck/Mills/Stipe",
+            "comment": ""
+          },
+          "8": {
+            "track-title": "Fireplace",
+            "length": "3:25",
+            "composer": "Berry/Buck/Mills/Stipe",
+            "comment": ""
+          },
+          "9": {
+            "track-title": "Lightnin’ Hopkins",
+            "length": "3:21",
+            "composer": "Berry/Buck/Mills/Stipe",
+            "comment": ""
+          },
+          "10": {
+            "track-title": "King of Birds",
+            "length": "4:10",
+            "composer": "Berry/Buck/Mills/Stipe",
+            "comment": ""
+          },
+          "11": {
+            "track-title": "Oddfellows Local 151",
+            "length": "5:23",
+            "composer": "Berry/Buck/Mills/Stipe",
+            "comment": ""
+          }
+        }]
+      }]
+    }
+  }]
+}
