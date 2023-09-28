@@ -19,7 +19,7 @@ installation, mysql, windows, 10, macos, monterey, command line interface, cli, 
 13. click *OK* all the way out.
 14. Now your all command line interfaces can “see” MySQL.
 15. Finally, let’s launch MySQL using our new root password: `mysql -u root -p`
-16. Type `status` to see which important MySQL-related info, such as the user who is logged in, the host on which they’re connected, and the character sets being used.
+16. Type `status` to see important, MySQL-related info, such as the user who is logged in, the host on which they’re connected, and the character sets being used.
 
 ---
 
@@ -35,5 +35,6 @@ installation, mysql, windows, 10, macos, monterey, command line interface, cli, 
 8. Note the path to the MySQL installation, under the version number in bold.
 9. Launch The Terminal and use VS Code to edit `.bashrc` from your home folder.
 10. Add the following to your path: `export PATH="[PATH-TO-MYSQL]/bin:$PATH"`, where `[PATH-TO-MYSQL]` is the path noted in step 8. My path entry looks like this: `export PATH="/usr/local/mysql-8.1.0-macos13-arm64/bin:$PATH"`
-11. Launch The Terminal and type `mysql -u root -p`. Enter your new password.
-12. Type `status` to see which important MySQL-related info, such as the user who is logged in, the host on which they’re connected, and the character sets being used.
+11. Relaunch The Terminal and type `bash`. (The assumption here is that you’re _not_ running bash, but the zsh, which is the default shell in macOS Ventura.)
+12. Type `mysql -u root -p` then enter your new password.
+13. Type `status` to see important, MySQL-related info, such as the user who is logged in, the host on which they’re connected, and the character sets being used.
