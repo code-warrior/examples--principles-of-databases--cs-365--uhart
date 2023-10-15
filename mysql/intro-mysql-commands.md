@@ -163,8 +163,8 @@ SHOW DATABASES;
 
 ```sql
 CREATE TABLE students (
-   first_name VARCHAR(20) NOT NULL,
-   last_name VARCHAR(20) NOT NULL
+  first_name VARCHAR(20) NOT NULL,
+  last_name VARCHAR(20) NOT NULL
 );
 ```
 
@@ -217,12 +217,12 @@ VALUES
 
 ```sql
 INSERT INTO students
-   (first_name, last_name)
+  (first_name, last_name)
 VALUES
-   ("Edward", 'Bobward'),
-   ("Ed", 'Bob'),
-   ("Frank", "Enstein"),
-   ("Johnny", "Rotten");
+  ('Edward', 'Bobward'),
+  ('Ed', 'Bob'),
+  ('Frank', 'Enstein'),
+  ('Johnny', 'Rotten');
 ```
 
 ---
@@ -239,7 +239,7 @@ SELECT * FROM students;
 Let’s get all students whose first name is Frank.
 
 ```sql
-SELECT * FROM students WHERE first_name LIKE "Frank";
+SELECT * FROM students WHERE first_name = "Frank";
 ```
 
 ---
