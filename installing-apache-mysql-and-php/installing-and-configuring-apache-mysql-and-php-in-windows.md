@@ -37,7 +37,7 @@ Precede `index.html` with `index.php`, so it looks like:
   DirectoryIndex index.php index.html
 </IfModule>
 ```
-12. In the same `my.cnf` file, add the following to the end of the file, assuming PHP is in `C:\php`:
+12. In the same `httpd.conf` file, add the following to the end of the file, assuming PHP is in `C:\php`:
 ```php
 # PHP8 module
 PHPIniDir "C:/php"
