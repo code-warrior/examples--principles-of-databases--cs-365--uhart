@@ -24,7 +24,7 @@ And, lastly, before you begin, consider starting a scratch file on your desktop,
 7. Restart your computer.
 8. Navigate to the `htdocs` folder inside the Apache folder.
 9. Create a new file called `info.php`, then add `<?php echo phpinfo();`. Save it. We’ll need this file during the PHP installation phase later.
-10. From Apache’s `conf` folder, open `my.cnf` in your editor.
+10. From Apache’s `conf` folder, open `httpd.conf` in your editor.
 11. Locate the the following configuration section:
 ```apache
 <IfModule dir_module>
