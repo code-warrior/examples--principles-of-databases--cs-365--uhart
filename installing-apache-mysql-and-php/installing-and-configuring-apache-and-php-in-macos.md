@@ -8,4 +8,4 @@ https://getgrav.org/blog/macos-ventura-apache-multiple-php-versions
 
 1. Once the installation is done, launch your Terminal.
 2. Navigate to your `Sites` directory. For example, my folder is in `/Users/royvanegas/Sites`.
-3. Clone the test app we’ll need: `git clone git@bitbucket.org:code-warrior/web-app`.
+3. Clone the test app called [web-app](https://bitbucket.org/code-warrior/web-app/src/master/) from Bitbucket we’ll need: `git clone git@bitbucket.org:code-warrior/web-app`.
