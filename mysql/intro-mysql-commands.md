@@ -22,7 +22,7 @@ Principles of Databases (CS 365)
 ## Logging in
 The following command says, “Log in to MySQL as user (`-u`) root and tell the CLI to request my password (`-p`).
 
-```sql
+```bash
 mysql -u root -p
 ```
 
@@ -31,7 +31,7 @@ mysql -u root -p
 ## Logging in
 You can also close the space between `-u` and root, as follows:
 
-```sql
+```bash
 mysql -uroot -p
 ```
 
@@ -40,13 +40,13 @@ mysql -uroot -p
 ## Logging in
 You can also append the password to the `-p` option. (No space character.) For example, if my password were `password`, I could log in as follows:
 
-```sql
+```bash
 mysql -u root -ppassword
 ```
 
 or
 
-```sql
+```bash
 mysql -uroot -ppassword
 ```
 
@@ -67,7 +67,7 @@ history -c
 
 The more secure option is to have MySQL request your password via your CLI.
 
-```sql
+```bash
 mysql -u root -p
 ```
 
@@ -324,4 +324,149 @@ Let’s remove Johnny, who’s no longer a student:
 
 ```sql
 DELETE FROM students WHERE first_name="Johnny";
+```
+
+---
+
+## Remove a Database and Its Users
+There are multiple ways to delete a database. The most common and modern way is…
+
+```sql
+DROP DATABASE IF EXISTS users;
+```
+
+or
+
+```sql
+DROP DATABASE users;
+```
+
+---
+
+## Remove a Database and Its Users
+`SCHEMA` is synonymous with `DATABASE`. Thus, you could also say…
+
+```sql
+DROP SCHEMA IF EXISTS users;
+```
+
+or
+
+```sql
+DROP SCHEMA users;
+```
+
+---
+
+## Remove a Database and Its Users
+We’ll now need to remove the user — whose username is `the-user` — from MySQL.
+
+```sql
+DROP USER IF EXISTS 'the-user'@'localhost';
+```
+
+---
+
+## Stand up a Database in Two Commands
+Log in to MySQL…
+
+```bash
+mysql -u root -p
+```
+
+…then load `setup.sql`:
+
+```sql
+source setup.sql
+```
+
+---
+
+## Stand up a Database in Two Commands
+You can also stand up the database in one command:
+
+```bash
+mysql -u root -p < setup.sql
+```
+
+---
+
+## The `DELETE` Statement
+Remove all rows from a table.
+
+```sql
+DELETE FROM track;
+```
+
+---
+
+## The `DELETE` Statement
+Let’s delete Every Country’s Sun
+
+```sql
+DELETE FROM album WHERE album_name = "Every Country’s Sun";
+```
+
+or
+
+```sql
+DELETE FROM album
+WHERE (artist_id = 5 AND album_id = 2);
+```
+
+The latter makes use of the keys that we used to design the database. As such, it is more secure.
+
+---
+
+## The `DELETE` Statement
+Let’s delete _all_ albums with an `album_id` of `1`.
+
+```sql
+DELETE FROM ALBUM WHERE album_id = 1;
+```
+
+---
+
+## The `DELETE` Statement
+Let’s delete an artist, their album(s), and those albums’ tracks. First, let’s choose a band, Melvins.
+
+```sql
+SELECT artist_id, artist_name, album_name
+FROM artist INNER JOIN album
+USING (artist_id)
+WHERE artist_name = "Melvins";
+```
+
+---
+
+## The `DELETE` Statement
+Now we can delete everything related to The Melvins.
+
+```sql
+DELETE FROM artist, album, track USING artist, album, track
+WHERE artist.artist_id = 4 AND
+artist.artist_id = album.artist_id AND
+artist.artist_id = track.artist_id AND
+album.album_id = track.album_id;
+```
+
+Compare with…
+
+```sql
+DELETE FROM artist, album, track USING artist, album, track
+WHERE artist.artist_id = 4 AND
+artist.artist_id = album.artist_id AND
+artist.artist_id = track.artist_id;
+```
+
+---
+
+## The `DELETE` Statement
+
+And, we can now verify:
+
+```sql
+SELECT track_name
+FROM track
+WHERE artist_id = 4;
 ```
