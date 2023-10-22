@@ -244,7 +244,7 @@ SELECT * FROM students WHERE first_name = "Frank";
 
 ---
 
-## Read All Records from a Table that Start with a String (READ)
+## Pattern Matching
 Let’s get all students whose first name starts with “ed”.
 
 ```sql
@@ -259,7 +259,7 @@ SELECT * FROM students WHERE UPPER(first_name) LIKE UPPER("ed%");
 
 ---
 
-## Read All Records from a Table that End with a String (READ)
+## Pattern Matching
 
 ```sql
 SELECT * FROM students WHERE last_name LIKE "%Bob";
