@@ -273,6 +273,21 @@ SELECT * FROM students WHERE UPPER(last_name) LIKE UPPER("%bob");
 
 ---
 
+## Pattern Matching
+
+Get all track names that start with “Do” followed by 9 characters, listed alphabetically:
+
+```sql
+SELECT *
+FROM track
+WHERE track_name LIKE 'Do_________'
+ORDER BY track_name;
+```
+
+The underscore (`_`) character is a placeholder for any character.
+
+---
+
 ## Read All Records from a Table’s Column (READ)
 Let’s get all `first_name`s from the `students` table.
 
