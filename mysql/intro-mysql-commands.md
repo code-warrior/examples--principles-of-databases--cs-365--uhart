@@ -518,3 +518,70 @@ SELECT track_name
 FROM track
 WHERE artist_id = 4;
 ```
+
+---
+
+## The `SELECT` Statement
+
+Get all song titles, listed alphabetically:
+
+```sql
+SELECT * FROM track
+ORDER BY track_name;
+```
+
+The result is an alphabetical — or lexicographical — list of tuples in ascending order (`ASC`), which is the default. Thus, the previous command is equivalent to the following:
+
+```sql
+SELECT * FROM track
+ORDER BY track_name ASC;
+```
+
+---
+
+## The `SELECT` Statement
+
+You may also list the result in descending (`DESC`) order:
+
+```sql
+SELECT * FROM track
+ORDER BY track_name DESC;
+```
+
+---
+
+## The `SELECT` Statement
+
+Get and rename both attributes from the music schema’s `artist` table:
+
+```sql
+SELECT artist_id AS ID, artist_name AS Artist
+FROM artist;
+```
+
+`AS` is optional in the renaming. You could also do:
+
+```sql
+SELECT artist_id ID, artist_name Artist
+FROM artist;
+```
+
+---
+
+## The `SELECT` Statement
+
+If using multiple words in a string, you’ll need to wrap the content in foot marks (' ').
+
+```sql
+SELECT artist_id AS 'Unique ID', artist_name AS Artist
+FROM artist;
+```
+
+You may also use backticks (\` \`):
+
+```sql
+SELECT artist_id AS `Unique ID`, artist_name AS Artist
+FROM artist;
+```
+
+---
