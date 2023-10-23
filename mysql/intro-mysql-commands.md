@@ -585,3 +585,49 @@ FROM artist;
 ```
 
 ---
+
+## The `JOIN` Statement
+
+Get all artists and their albums. Note the different ways to do this.
+
+```sql
+SELECT artist_name AS Artist, album_name AS Album
+FROM artist
+JOIN album
+WHERE (artist.artist_id = album.artist_id);
+```
+
+```sql
+SELECT artist_name AS Artist, album_name AS Album
+FROM artist
+INNER JOIN album
+USING (artist_id);
+```
+
+---
+
+## The `JOIN` Statement
+
+```sql
+SELECT artist_name AS Artist, album_name AS Album
+FROM artist
+JOIN album
+USING (artist_id);
+```
+
+```sql
+SELECT artist_name AS Artist, album_name AS Album
+FROM artist
+INNER JOIN album ON
+(artist.artist_id = album.artist_id);
+```
+
+---
+
+## The `JOIN` Statement
+
+```sql
+SELECT artist_name AS Artist, album_name AS Album
+FROM artist, album
+WHERE (artist.artist_id = album.artist_id);
+```
