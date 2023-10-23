@@ -20,6 +20,7 @@ Principles of Databases (CS 365)
 ---
 
 ## Logging in
+
 The following command says, “Log in to MySQL as user (`-u`) root and tell the CLI to request my password (`-p`).
 
 ```bash
@@ -29,6 +30,7 @@ mysql -u root -p
 ---
 
 ## Logging in
+
 You can also close the space between `-u` and root, as follows:
 
 ```bash
@@ -38,6 +40,7 @@ mysql -uroot -p
 ---
 
 ## Logging in
+
 You can also append the password to the `-p` option. (No space character.) For example, if my password were `password`, I could log in as follows:
 
 ```bash
@@ -53,6 +56,7 @@ mysql -uroot -ppassword
 ---
 
 ## Logging in
+
 Appending the password to the `-p` option is insecure, as the password would sit as a plain text entry in your CLI’s history file.
 
 In `bash`, for example, you’d find the password in `.bash_history`. You could clear it (and the rest of your history) with the `-c` flag to the `history` command:
@@ -74,6 +78,7 @@ mysql -u root -p
 ---
 
 ## Exiting MySQL
+
 Similar to exiting your CLI, exiting MySQL is simply…
 
 ```sql
@@ -83,6 +88,7 @@ EXIT
 ---
 
 ## Warnings
+
 If an error is generated, you can see the latest warning with
 
 ```sql
@@ -92,6 +98,7 @@ SHOW WARNINGS;
 ---
 
 ## Checking the Status of the Database
+
 You can view some important information, such as current user and database, IP address, and character set configurations, using the `STATUS` command:
 
 ```sql
@@ -101,6 +108,7 @@ STATUS
 ---
 
 ## Creating a Database
+
 Let’s create a database called `users` with a default and collation character set of UTF-8.
 
 ```sql
@@ -112,6 +120,7 @@ CREATE DATABASE `users` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_bin;
 ---
 
 ## Creating a Database | Placing Focus
+
 To work with a database, you need to focus on it by using the `USE` command. Let’s focus on the `users` database:
 
 ```sql
@@ -123,6 +132,7 @@ If you now run `STATUS`, you’ll see, `Current database: users` below `Connecti
 ---
 
 ## Add a User to the Database with a Password
+
 Let’s create a user called `the-user` whose password is `the-password`.
 
 ```sql
@@ -132,6 +142,7 @@ CREATE USER 'the-user'@'localhost' IDENTIFIED BY 'the-Passw0rd!';
 ---
 
 ## Provide a User Access to the Database
+
 Let’s now grant `the-user` _all_ privileges to _all_ the tables under the `users` database
 
 ```sql
@@ -141,6 +152,7 @@ GRANT ALL PRIVILEGES ON users.* to 'the-user'@'localhost';
 ---
 
 ## Logging into the Database with the New User
+
 Exit the database (`exit`), then log back in as the new user:
 
 
@@ -151,6 +163,7 @@ mysql -u the-user -p
 ---
 
 ## Show Databases
+
 You can see the databases to which you have access with the `SHOW` command:
 
 ```sql
@@ -173,6 +186,7 @@ CREATE TABLE students (
 ---
 
 ## Show Tables
+
 Show the tables in the current database:
 
 ```sql
@@ -182,6 +196,7 @@ SHOW TABLES;
 ---
 
 ## Flush the Contents of a Table
+
 To empty the contents of a table is to flush them. Flushing means that MySQL will drop the tables, then recreate them without any entries.
 
 ```sql
@@ -191,6 +206,7 @@ TRUNCATE TABLE students;
 ---
 
 ## Drop/Delete a Table
+
 Let’s delete the `students` table.
 
 ```sql
@@ -236,6 +252,7 @@ SELECT * FROM students;
 ---
 
 ## Read All Records from a Table with a Matching Clause (READ)
+
 Let’s get all students whose first name is Frank.
 
 ```sql
@@ -245,6 +262,7 @@ SELECT * FROM students WHERE first_name = "Frank";
 ---
 
 ## Pattern Matching
+
 Let’s get all students whose first name starts with “ed”.
 
 ```sql
@@ -289,6 +307,7 @@ The underscore (`_`) character is a placeholder for any character.
 ---
 
 ## Read All Records from a Table’s Column (READ)
+
 Let’s get all `first_name`s from the `students` table.
 
 ```sql
@@ -298,6 +317,7 @@ SELECT first_name FROM students;
 ---
 
 ## Read All Records from a Table’s Column (READ)
+
 Or `last_name`s.
 
 ```sql
@@ -315,6 +335,7 @@ SELECT last_name, first_name FROM students;
 ---
 
 ## Describe the Fields/Columns in a Table
+
 There are at least 3 different ways to describe the structure of a table.
 
 ```sql
@@ -326,6 +347,7 @@ DESCRIBE students;
 ---
 
 ## Update (UPDATE)
+
 Let’s change Frank’s first name to Albert:
 
 ```sql
@@ -335,6 +357,7 @@ UPDATE students SET first_name="Albert" WHERE first_name="Frank";
 ---
 
 ## Remove (DELETE)
+
 Let’s remove Johnny, who’s no longer a student:
 
 ```sql
@@ -344,6 +367,7 @@ DELETE FROM students WHERE first_name="Johnny";
 ---
 
 ## Remove a Database and Its Users
+
 There are multiple ways to delete a database. The most common and modern way is…
 
 ```sql
@@ -359,6 +383,7 @@ DROP DATABASE users;
 ---
 
 ## Remove a Database and Its Users
+
 `SCHEMA` is synonymous with `DATABASE`. Thus, you could also say…
 
 ```sql
@@ -374,6 +399,7 @@ DROP SCHEMA users;
 ---
 
 ## Remove a Database and Its Users
+
 We’ll now need to remove the user — whose username is `the-user` — from MySQL.
 
 ```sql
@@ -383,6 +409,7 @@ DROP USER IF EXISTS 'the-user'@'localhost';
 ---
 
 ## Stand up a Database in Two Commands
+
 Log in to MySQL…
 
 ```bash
@@ -398,6 +425,7 @@ source setup.sql
 ---
 
 ## Stand up a Database in Two Commands
+
 You can also stand up the database in one command:
 
 ```bash
@@ -407,6 +435,7 @@ mysql -u root -p < setup.sql
 ---
 
 ## The `DELETE` Statement
+
 Remove all rows from a table.
 
 ```sql
@@ -416,6 +445,7 @@ DELETE FROM track;
 ---
 
 ## The `DELETE` Statement
+
 Let’s delete Every Country’s Sun
 
 ```sql
@@ -434,6 +464,7 @@ The latter makes use of the keys that we used to design the database. As such, i
 ---
 
 ## The `DELETE` Statement
+
 Let’s delete _all_ albums with an `album_id` of `1`.
 
 ```sql
@@ -443,6 +474,7 @@ DELETE FROM ALBUM WHERE album_id = 1;
 ---
 
 ## The `DELETE` Statement
+
 Let’s delete an artist, their album(s), and those albums’ tracks. First, let’s choose a band, Melvins.
 
 ```sql
@@ -455,6 +487,7 @@ WHERE artist_name = "Melvins";
 ---
 
 ## The `DELETE` Statement
+
 Now we can delete everything related to The Melvins.
 
 ```sql
