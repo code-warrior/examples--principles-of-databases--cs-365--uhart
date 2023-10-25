@@ -4,16 +4,19 @@ theme: Plain Jane, 3
 build-lists: true
 
 # Introductory MySQL Commands
+
 Principles of Databases (CS 365)
 
 ---
 
 ## UTF-8 Character Set Conflicts
+
 * Use UTF-8 character sets whenever possible
 
 ---
 
 ## MySQL Configuration File
+
 * On macOS, add `my.cnf` to the `/etc` folder.
 * In Windows `my.cnf` may be called `my.ini` and could be in one of many places. Read the official documentation from `dev.mysql.com` at [https://dev.mysql.com/doc/refman/8.0/en/option-files.html](https://dev.mysql.com/doc/refman/8.0/en/option-files.html)
 
@@ -155,7 +158,6 @@ GRANT ALL PRIVILEGES ON users.* to 'the-user'@'localhost';
 
 Exit the database (`exit`), then log back in as the new user:
 
-
 ```bash
 mysql -u the-user -p
 ```
@@ -218,6 +220,7 @@ DROP TABLE students;
 ---
 
 ## Insert a Single Record in a Table (CREATE)
+
 ```sql
 INSERT INTO students
   (first_name, last_name)
@@ -630,4 +633,82 @@ INNER JOIN album ON
 SELECT artist_name AS Artist, album_name AS Album
 FROM artist, album
 WHERE (artist.artist_id = album.artist_id);
+```
+
+---
+
+## Working with `AES_ENCRYPT`
+
+The default `block_encryption_mode` is `aes-128-ecb`, which does not require an initialization vector. We want the extra security attached to an initialization vector, so we need to set `block_encryption_mode` to `aes-256-cbc`.
+
+First, let’s check the current value of `block_encryption_mode`.
+
+```sql
+SHOW VARIABLES WHERE variable_name = "block_encryption_mode";
+```
+
+or
+
+```sql
+SELECT @@global.block_encryption_mode;
+```
+
+---
+
+## Working with `AES_ENCRYPT`
+
+Let’s now set it:
+
+```sql
+SET block_encryption_mode = 'aes-256-cbc';
+```
+
+---
+
+## Working with `AES_ENCRYPT`
+
+According to the [`AES_ENCRYPT`](https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_aes-decrypt) documentation, we’ll need a key to unlock the encryption. We’re advised to do this with a user-defined variable, as follows:
+
+```sql
+SET @init_vector = RANDOM_BYTES(16);
+```
+
+---
+
+## Working with `AES_ENCRYPT`
+
+Let’s test it:
+
+```sql
+SELECT @init_vector;
+```
+
+---
+
+## Working with `AES_ENCRYPT`
+
+Now log in to MySQL and run `setup.sql` from the enclosed `aes-encrypt-example` folder:
+
+```sql
+source setup.sql;
+```
+
+---
+
+## Working with `AES_ENCRYPT`
+
+View all the entries:
+
+```sql
+SELECT * FROM user;
+```
+
+---
+
+## Working with `AES_DECRYPT`
+
+And, finally, run the following to view the unciphered passwords:
+
+```sql
+SELECT CAST(AES_DECRYPT(password, @key_str, @init_vector) AS CHAR) AS 'Plain Text Password' FROM user;
 ```
