@@ -1,17 +1,17 @@
-CREATE TABLE artist (
+CREATE TABLE IF NOT EXISTS artist (
   artist_id   SMALLINT(5)  NOT NULL,
   artist_name VARCHAR(128) NOT NULL,
   PRIMARY KEY (artist_id)
 );
 
-CREATE TABLE album (
+CREATE TABLE IF NOT EXISTS album (
   artist_id  SMALLINT(5)  NOT NULL,
   album_id   SMALLINT(4)  NOT NULL,
   album_name VARCHAR(128) NOT NULL,
   PRIMARY KEY (artist_id, album_id)
 );
 
-CREATE TABLE track (
+CREATE TABLE IF NOT EXISTS track (
   artist_id  SMALLINT(5)  NOT NULL,
   album_id   SMALLINT(4)  NOT NULL,
   track_id   SMALLINT(3)  NOT NULL,
