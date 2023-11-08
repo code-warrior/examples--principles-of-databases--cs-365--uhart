@@ -12,7 +12,7 @@ INSERT INTO album VALUES
     (@THE_CHROME_CRANKS, 1, 'Dead Cool'),
     (@MELVINS, 1, 'Houdini'),
     (@MOGWAI, 1, 'Come on Die Young'),
-    (@MOGWAI, +2, 'Every Country’s Sun'),
+    (@MOGWAI, 2, 'Every Country’s Sun'),
     (@WARPAINT, 1, 'Heads Up');
 
 INSERT INTO track VALUES
