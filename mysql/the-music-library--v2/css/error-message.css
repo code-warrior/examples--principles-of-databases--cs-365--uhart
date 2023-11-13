@@ -1,0 +1,24 @@
+@import url("http://fonts.googleapis.com/css?family=Titillium+Web:400,700&amp;subset=latin,latin-ext");
+body {
+  border: 1px solid pink;
+  font: 1em "Titillium Web", sans-serif;
+  margin: 20px auto;
+  padding: 25px;
+  width: 625px;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+.teletype {
+  font-family: monospace;
+}
+
+.larger-typeface {
+  font-size: 120%;
+}
+
+.extra-padding {
+  padding: 25px;
+}
