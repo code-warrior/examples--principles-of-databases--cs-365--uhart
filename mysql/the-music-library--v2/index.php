@@ -23,13 +23,13 @@ const MELVINS = 4;
       <h2>Check if a Value Exists in a Table’s Attribute</h2>
       <p><code>function valueExistsInAttribute($value, $attribute, $table)</code></p>
       <hr>
-      <p><strong class="database-query">Query</strong>: Is Dysnomia in my record collection?</p>
+      <p><strong class="database-query">Query</strong>: Is <i>Dysnomia</i> in my record collection?</p>
       <p><strong class="database-result">Result</strong>:
         <?php
             if(valueExistsInAttribute("Dysnomia", "album_name", "album")) {
-                echo "According to our database, Dysnomia is in my record collection.";
+                echo "According to our database, <i>Dysnomia</i> is in my record collection.";
             } else {
-                echo "<strong>Dsynomia was <em>not</em> found in your music database. What a shame?</strong>";
+                echo "<strong><i>Dsynomia</i> was <em>not</em> found in your music database. What a shame?</strong>";
             }
         ?>
       </p>
