@@ -13,7 +13,7 @@ INSERT INTO album VALUES
     (@MELVINS, 1, 'Houdini'),
     (@MOGWAI, 1, 'Come on Die Young'),
     (@MOGWAI, 2, 'Every Country’s Sun'),
-    (@WARPAINT, 1, 'Heads Up');
+    (@WARPAINT, 1, 'HEADS UP');
 
 INSERT INTO track VALUES
     (@DAWN_OF_MIDI, 1, 1, 'Io', '6.03'),
