@@ -1,0 +1,121 @@
+body {
+  background-color: #191919;
+  color: white;
+  margin-bottom: 100px;
+}
+
+body, input {
+  font-family: "IBM Plex Mono", "Fira Mono", "Inconsolata", "Anonymous Pro", monospace;
+}
+
+legend, th {
+  text-transform: uppercase;
+  color: #fad;
+  padding: 0 20px;
+}
+
+table, td, th {
+  border: 1px solid #444;
+}
+
+table {
+  margin: 50px auto;
+  border-collapse: collapse;
+}
+
+table td, table th {
+  padding: 10px;
+}
+
+table thead tr th:nth-child(5) {
+  white-space: nowrap;
+}
+
+table tbody td:nth-child(5) {
+  padding: 24px;
+  cursor: pointer;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #262626;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #1e1e1e;
+}
+
+table tbody tr:hover {
+  background-color: #333;
+}
+
+form {
+  padding: 10px 0;
+}
+
+form fieldset {
+  padding: 10px 20px 20px;
+}
+
+form fieldset p {
+  margin-top: 15px;
+}
+
+form fieldset p input[type=input] {
+  background-color: blue;
+}
+
+form select {
+  font-size: 0.9em;
+  background-color: #999;
+  padding: 5px;
+  border: 0;
+  vertical-align: middle;
+}
+
+form input {
+  background-color: #191919;
+  color: white;
+  padding: 5px;
+  border: 1px solid #4c4c4c;
+  vertical-align: top;
+}
+
+form input:focus {
+  box-shadow: 0 0 10px #fff;
+}
+
+form input[type=submit] {
+  border: 1px solid #666;
+  background-color: #4c4c4c;
+  color: white;
+  padding: 5px;
+  font-size: 0.8em;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  margin: 10px 0 0;
+}
+
+#clear-results {
+  text-align: left;
+  position: fixed;
+  top: 20px;
+  left: 0;
+  margin-left: 8px;
+}
+
+#clear-results input {
+  background-color: red;
+}
+
+#error {
+  color: red;
+  text-align: center;
+  margin: 25px 0;
+  background-color: pink;
+  padding: 25px 0;
+}

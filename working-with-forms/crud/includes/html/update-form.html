@@ -1,0 +1,18 @@
+<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+   <fieldset>
+      <legend>Update</legend>
+      UPDATE artist SET
+      <select name="current-attribute" id="current-attribute">
+        <option>artist_name</option>
+         <option>artist_id</option>
+      </select>
+      = <input type="text" name="new-attribute" required> WHERE
+      <select name="query-attribute" id="query-attribute">
+        <option>artist_id</option>
+        <option>artist_name</option>
+      </select>
+      = <input type="text" name="pattern" required>
+      <input type="hidden" name="submitted" value="2">
+      <p><input type="submit" value="update"></p>
+   </fieldset>
+</form>

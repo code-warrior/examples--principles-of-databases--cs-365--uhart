@@ -1,0 +1,8 @@
+<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+   <fieldset>
+      <legend>Insert</legend>
+      INSERT INTO artist VALUES ( <input type="text" name="artist-id" placeholder="artist_id" required>, <input type="text" name="artist-name" placeholder="artist_name" required> );
+      <input type="hidden" name="submitted" value="3">
+      <p><input type="submit" value="insert"></p>
+   </fieldset>
+</form>

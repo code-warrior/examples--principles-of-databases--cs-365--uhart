@@ -1,0 +1,13 @@
+<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+   <fieldset>
+      <legend>Delete</legend>
+      DELETE FROM artist WHERE
+      <select name="current-attribute" id="current-attribute">
+         <option>artist_id</option>
+         <option>artist_name</option>
+      </select>
+      = <input type="text" name="pattern" required>
+      <input type="hidden" name="submitted" value="4">
+      <p><input type="submit" value="delete"></p>
+   </fieldset>
+</form>
