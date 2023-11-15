@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your First Form</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <form action="process-form.php" method="post">
+    <fieldset>
+      <legend>Your First Form</legend>
+      <p>
+        <label for="first-name">First Name:</label>
+        <input required autofocus type="text" id="first-name" name="first-name">
+      </p>
+      <p>
+        <label for="e-mail">E-mail:</label>
+        <input required type="email" id="e-mail" name="e-mail">
+      </p>
+      <p>
+        <label for="message">Message:</label>
+        <textarea required id="message" name="message"></textarea>
+      </p>
+      <p><input type="hidden" name="submitted" value="1"></p>
+      <p><button type="submit">Send your message</button></p>
+    </fieldset>
+  </form>
+</body>
+</html>
