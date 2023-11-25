@@ -1,21 +1,39 @@
+:root {
+  --primary-color: #fff;
+  --background-color: #191919;
+  --border-color: #666;
+  --background-color--button: #f00;
+  --legend-content-color: #fad;
+  --notification-banner-background-color: #ffc0cb;
+  --drop-down-menu-background-color: #999;
+  --table-row-hover-background-color: #333;
+  --color-six: #4c4c4c;
+  --row-striping-background-color--odd: #262626;
+  --row-striping-background-color--even: #1e1e1e;
+}
+
 body {
-  background-color: #191919;
-  color: white;
+  background-color: var(--background-color);
+  color: var(--primary-color);
   margin-bottom: 100px;
 }
 
-body, input {
-  font-family: "IBM Plex Mono", "Fira Mono", "Inconsolata", "Anonymous Pro", monospace;
+body,
+input {
+  font-family: 'IBM Plex Mono', 'Fira Mono', Inconsolata, 'Anonymous Pro', monospace;
 }
 
-legend, th {
+legend,
+th {
   text-transform: uppercase;
-  color: #fad;
+  color: var(--legend-content-color);
   padding: 0 20px;
 }
 
-table, td, th {
-  border: 1px solid #444;
+table,
+td,
+th {
+  border: 1px solid var(--border-color);
 }
 
 table {
@@ -23,7 +41,8 @@ table {
   border-collapse: collapse;
 }
 
-table td, table th {
+table td,
+table th {
   padding: 10px;
 }
 
@@ -37,15 +56,15 @@ table tbody td:nth-child(5) {
 }
 
 table tbody tr:nth-child(odd) {
-  background-color: #262626;
+  background-color: var(--row-striping-background-color--odd);
 }
 
 table tbody tr:nth-child(even) {
-  background-color: #1e1e1e;
+  background-color: var(--row-striping-background-color--even);
 }
 
 table tbody tr:hover {
-  background-color: #333;
+  background-color: var(--table-row-hover-background-color);
 }
 
 form {
@@ -60,36 +79,32 @@ form fieldset p {
   margin-top: 15px;
 }
 
-form fieldset p input[type=input] {
-  background-color: blue;
-}
-
 form select {
-  font-size: 0.9em;
-  background-color: #999;
-  padding: 5px;
   border: 0;
+  padding: 5px;
+  background-color: var(--drop-down-menu-background-color);
+  font-size: .9em;
   vertical-align: middle;
 }
 
 form input {
-  background-color: #191919;
-  color: white;
+  border: 1px solid var(--color-six);
   padding: 5px;
-  border: 1px solid #4c4c4c;
+  background-color: var(--background-color);
+  color: var(--primary-color);
   vertical-align: top;
 }
 
 form input:focus {
-  box-shadow: 0 0 10px #fff;
+  box-shadow: 0 0 10px var(--primary-color);
 }
 
-form input[type=submit] {
-  border: 1px solid #666;
-  background-color: #4c4c4c;
-  color: white;
+form input[type="submit"] {
+  border: 1px solid var(--border-color);
   padding: 5px;
-  font-size: 0.8em;
+  background-color: var(--color-six);
+  color: var(--primary-color);
+  font-size: .8em;
 }
 
 h1 {
@@ -101,21 +116,21 @@ p {
 }
 
 #clear-results {
-  text-align: left;
   position: fixed;
   top: 20px;
   left: 0;
   margin-left: 8px;
+  text-align: left;
 }
 
 #clear-results input {
-  background-color: red;
+  background-color: var(--background-color--button);
 }
 
 #error {
-  color: red;
-  text-align: center;
   margin: 25px 0;
-  background-color: pink;
   padding: 25px 0;
+  background-color: var(--notification-banner-background-color);
+  color: var(--background-color--button);
+  text-align: center;
 }
