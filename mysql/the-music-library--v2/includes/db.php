@@ -204,7 +204,7 @@ function printAttributesFromTable($attribute, $table) {
         $statement = $db -> prepare("SELECT $attribute FROM $table");
         $statement -> execute();
 
-        while($row = $statement -> fetch(PDO::FETCH_NUM, PDO::FETCH_ORI_NEXT)) {
+        while($row = $statement -> fetch(PDO::FETCH_NUM)) {
             echo "<li>$row[0]</li>\n";
         }
 
