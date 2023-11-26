@@ -9,9 +9,9 @@
  *
  * would return true.
  *
- * @param String $value     The query I’m interested in finding.
- * @param String $attribute The attribute under which I would like to locate $value.
- * @param String $table     The table containing the $attribute.
+ * @param $value      The query I’m interested in finding.
+ * @param $attribute  The attribute under which I would like to locate $value.
+ * @param $table      The table containing the $attribute.
  *
  * @access public
  * @return bool|void
@@ -61,10 +61,10 @@ function valueExistsInAttribute($value, $attribute, $table) {
  *
  *    $album = select("album_name", "album", "artist_id", "2");
  *
- * @param String $value   The attribute I want to retrieve
- * @param String $table   The table in which the attribute resides
- * @param String $query   The query I want to match
- * @param String $pattern The pattern that the query should match
+ * @param $value   The attribute I want to retrieve
+ * @param $table   The table in which the attribute resides
+ * @param $query   The query I want to match
+ * @param $pattern The pattern that the query should match
  *
  * @access public
  * @return false|mixed|void
@@ -161,9 +161,9 @@ function updateAttribute($table, $current_attribute, $new_attribute, $query_attr
  *
  *    delete("user", "username", "guitarist");
  *
- * @param String $table The table holding the query to delete
- * @param String $attribute The field whose query I want to match for deletion
- * @param String $query The entry I care to delete
+ * @param $table     The table holding the query to delete
+ * @param $attribute The field whose query I want to match for deletion
+ * @param $query     The entry I care to delete
  *
  * @access public
  * @return void
