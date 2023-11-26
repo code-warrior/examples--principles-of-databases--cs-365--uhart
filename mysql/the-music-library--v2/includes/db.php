@@ -192,7 +192,7 @@ function delete($table, $attribute, $query) {
 
 /**
  * Prints each $attribute associated with a $table. For example, if I wanted to
- * print every album name in an album database, I would use this function as
+ * print every album name in an “album” database, I would use this function as
  * follows:
  *
  *    printAttributesFromTable("album_name", "album");
