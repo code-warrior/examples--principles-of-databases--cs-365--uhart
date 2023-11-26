@@ -8,7 +8,7 @@ const MELVINS = 4;
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Working with a XAMP Stack Using a Music Database</title>
+  <title>The Music Library — V2 (Working with a XAMP Stack Using a Music Database)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:ital,wght@100;200;500&display=swap" rel="stylesheet">
