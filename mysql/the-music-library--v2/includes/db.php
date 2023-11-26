@@ -83,7 +83,7 @@ function getValue($value, $table, $query, $pattern) {
 
         $statement = null;
 
-        if ($row === false ) {
+        if ($row === false) {
             $result = false;
         } else {
             $result = $row[$value];
@@ -136,7 +136,7 @@ function updateAttribute($table, $current_attribute, $new_attribute, $query_attr
         );
 
         $statement -> execute(
-            array('new_attribute' => $new_attribute, 'pattern' => $pattern )
+            array('new_attribute' => $new_attribute, 'pattern' => $pattern)
         );
 
         $statement = null;
@@ -167,7 +167,6 @@ function updateAttribute($table, $current_attribute, $new_attribute, $query_attr
  */
 function delete($table, $attribute, $query) {
     try {
-
         include_once "config.php";
 
         $db = new PDO("mysql:host=".DBHOST."; dbname=".DBNAME,
