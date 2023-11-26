@@ -54,9 +54,9 @@ const MELVINS = 4;
             $albumName = getValue("album_name", "album", "artist_id", MELVINS);
 
             if(strcmp($albumName, "Houdini") == 0) {
-                echo "Indeed, <i>{$albumName}</i> is in my collection";
+                echo "Indeed, <i>$albumName</i> is in my collection";
             } else {
-                echo "<i>{$albumName}</i> is not in your collection. Get it, now!";
+                echo "<i>$albumName</i> is not in your collection. Get it, now!";
             }
         ?>
       </p>
