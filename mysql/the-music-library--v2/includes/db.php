@@ -195,7 +195,6 @@ function printAttributesFromTable($attribute, $table) {
     try {
         include_once "includes/config.php";
 
-        $row = array();
 
         $db = new PDO(
             "mysql:host=" . DBHOST . ";dbname=" . DBNAME,
