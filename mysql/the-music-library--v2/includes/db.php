@@ -193,7 +193,7 @@ function delete($table, $attribute, $query) {
  *
  *    printAttributesFromTable("album_name", "album");
  *
- * @param $attribute  The attribute whos values I’d like to print
+ * @param $attribute  The attribute whose values I’d like to print
  * @param $table      The table to which the attribute belongs
  *
  * @access public
