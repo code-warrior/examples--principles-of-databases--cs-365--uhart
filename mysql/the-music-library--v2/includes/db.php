@@ -14,7 +14,7 @@
  * @param String $table     The table containing the $attribute.
  *
  * @access public
- * @return Boolean return true upon finding a $value in the $attribute of $table.
+ * @return bool|void
  */
 function valueExistsInAttribute($value, $attribute, $table) {
     try {
@@ -67,7 +67,7 @@ function valueExistsInAttribute($value, $attribute, $table) {
  * @param String $pattern The pattern that the query should match
  *
  * @access public
- * @return string on success or Boolean on failure.
+ * @return false|mixed|void
  */
 function getValue($value, $table, $query, $pattern) {
     try {
