@@ -75,7 +75,8 @@ function getValue($value, $table, $query, $pattern) {
 
         $db = new PDO("mysql:host=".DBHOST."; dbname=".DBNAME, DBUSER, DBPASS);
 
-        $statement = $db -> prepare("SELECT $value FROM $table WHERE $query = :q");
+        $statement = $db ->
+            prepare("SELECT $value FROM $table WHERE $query = :q");
 
         $statement -> execute(array('q' => $pattern));
 
@@ -125,9 +126,11 @@ function updateAttribute($table, $current_attribute, $new_attribute, $query_attr
     try {
         include_once "config.php";
 
-        $db = new PDO("mysql:host=".DBHOST."; dbname=".DBNAME,
+        $db = new PDO(
+            "mysql:host=".DBHOST."; dbname=".DBNAME,
             DBUSER,
-            DBPASS);
+            DBPASS
+        );
 
         $statement = $db -> prepare(
             "UPDATE $table " .
@@ -173,7 +176,8 @@ function delete($table, $attribute, $query) {
             DBUSER,
             DBPASS);
 
-        $statement = $db -> prepare("DELETE FROM $table WHERE $attribute = :query");
+        $statement = $db ->
+            prepare("DELETE FROM $table WHERE $attribute = :query");
         $statement -> execute(array('query' => $query));
         $statement = null;
     } catch(PDOException $error) {
