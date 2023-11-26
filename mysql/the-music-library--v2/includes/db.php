@@ -2,8 +2,8 @@
 
 /**
  * Looks for a $value from an $attribute’s column in a $table, returning true if
- * found, false if not. For example, if a value named “stairway to heaven” exists
- * under an attribute called “name” within a table called “songs,” then
+ * found, false if not. For example, if a value named “stairway to heaven”
+ * exists under an attribute called “name” within a table called “songs,” then
  *
  *    valueExistsInAttribute("stairway to heaven", "name", "songs")
  *
@@ -52,9 +52,9 @@ function valueExistsInAttribute($value, $attribute, $table) {
 }
 
 /**
- * Returns one $value — or the first, if more than one is retrieved — from a $table
- * if a $query should match a $pattern. For example, imagine you want the album
- * name from an album table whose artist ID is 2:
+ * Returns one $value — or the first, if more than one is retrieved — from a
+ * $table if a $query should match a $pattern. For example, imagine you want the
+ * album name from an album table whose artist ID is 2:
  *
  *    $album = select("album_name", "album", "artist_id", "2");
  *
@@ -97,9 +97,10 @@ function getValue($value, $table, $query, $pattern) {
 }
 
 /**
- * Updates the $current_attribute in a $table to a $new_attribute based on whether
- * $query_attribute matches $pattern. For example, if you wanted to update the album
- * name of Warpaint’s Heads Up to HEADS UP, you would use this function as follows:
+ * Updates the $current_attribute in a $table to a $new_attribute based on
+ * whether $query_attribute matches $pattern. For example, if you wanted to
+ * update the album name of Warpaint’s Heads Up to HEADS UP, you would use this
+ * function as follows:
  *
  *    update("album", "album_name", "HEADS UP", "album_name", "Heads Up");
  *
@@ -143,9 +144,9 @@ function updateAttribute($table, $current_attribute, $new_attribute, $query_attr
 }
 
 /**
- * Deletes an entry from a $table where a $query matches $attribute. For example, if I
- * wanted to delete a user whose username was “guitarist” from a table called
- * user, I would use this function as follows:
+ * Deletes an entry from a $table where a $query matches $attribute. For
+ * example, if I wanted to delete a user whose username was “guitarist” from a
+ * table called user, I would use this function as follows:
  *
  *    delete("user", "username", "guitarist");
  *
