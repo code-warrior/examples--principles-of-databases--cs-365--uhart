@@ -193,8 +193,7 @@ function delete($table, $attribute, $query) {
  */
 function printAttributesFromTable($attribute, $table) {
     try {
-        include_once "includes/config.php";
-
+        include_once "config.php";
 
         $db = new PDO(
             "mysql:host=" . DBHOST . ";dbname=" . DBNAME,
