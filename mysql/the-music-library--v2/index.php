@@ -29,7 +29,7 @@ const MELVINS = 4;
             if(valueExistsInAttribute("Dysnomia", "album_name", "album")) {
                 echo "According to our database, <i>Dysnomia</i> is in my record collection.";
             } else {
-                echo "<strong><i>Dsynomia</i> was <em>not</em> found in your music database. What a shame?</strong>";
+                echo "<strong><i>Dsynomia</i> was <em>not</em> found in my music collection. What a shame?</strong>";
             }
         ?>
       </p>
@@ -56,7 +56,7 @@ const MELVINS = 4;
             if(strcmp($albumName, "Houdini") == 0) {
                 echo "Indeed, <i>$albumName</i> is in my collection";
             } else {
-                echo "<i>$albumName</i> is not in your collection. Get it, now!";
+                echo "<i>$albumName</i> is not in my collection. I should get it!";
             }
         ?>
       </p>
