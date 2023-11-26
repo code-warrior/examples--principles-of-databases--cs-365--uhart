@@ -21,7 +21,7 @@ function valueExistsInAttribute($value, $attribute, $table) {
         include_once "config.php";
 
         $db = new PDO(
-            "mysql:host=" . DBHOST . "; dbname=" . DBNAME . ";charset=utf8", // The Data Source Name
+            "mysql:host=" . DBHOST . "; dbname=" . DBNAME . ";charset=utf8",
             DBUSER,
             DBPASS
         );
@@ -210,7 +210,6 @@ function printAttributesFromTable($attribute, $table) {
             echo "<li>$row[0]</li>\n";
         }
 
-        // Close the connection
         $statement = null;
 
     } catch(PDOException $e) {
