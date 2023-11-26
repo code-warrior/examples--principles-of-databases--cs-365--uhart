@@ -177,7 +177,7 @@ function delete($table, $attribute, $query) {
     }
 }
 
-function getAttributeFromTable($attribute, $table) {
+function printAttributesFromTable($attribute, $table) {
     try {
         include_once "includes/config.php";
 

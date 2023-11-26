@@ -41,7 +41,7 @@ const MELVINS = 4;
       <p><strong class="database-query">Query</strong> Show me all the albums in my record collection?</p>
       <p><strong class="database-result">Result</strong></p>
       <ul>
-        <?php getAttributeFromTable('album_name', 'album'); ?>
+        <?php printAttributesFromTable('album_name', 'album'); ?>
       </ul>
     </section>
     <section>
@@ -72,7 +72,7 @@ const MELVINS = 4;
         ?>
       </p>
       <ul>
-        <?php getAttributeFromTable('album_name', 'album'); ?>
+        <?php printAttributesFromTable('album_name', 'album'); ?>
       </ul>
     </section>
   </main>
