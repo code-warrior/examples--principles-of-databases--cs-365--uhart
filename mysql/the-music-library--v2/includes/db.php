@@ -110,14 +110,12 @@ function getValue($value, $table, $query, $pattern) {
  *
  *    update("album", "album_name", "HEADS UP", "album_name", "Heads Up");
  *
- * @param String $table             The table holding the attribute to update
- * @param String $current_attribute The current attribute that will be
- *                                    updated
- * @param String $new_attribute     The new attribute that will replace the
- *                                    current attribute
- * @param String $query_attribute   The attribute to be queried
- * @param String $pattern           The pattern the query attribute will need to
- *                                    match.
+ * @param $table             The table holding the attribute to update
+ * @param $current_attribute The current attribute that will be updated
+ * @param $new_attribute     The new attribute that will replace the current
+ *                             attribute
+ * @param $query_attribute   The attribute to be queried
+ * @param $pattern           The pattern the query attribute will need to match
  *
  * @access public
  * @return void
