@@ -178,6 +178,19 @@ function delete($table, $attribute, $query) {
     }
 }
 
+/**
+ * Prints each $attribute associated with a $table. For example, if I wanted to
+ * print every album name in an album database, I would use this function as
+ * follows:
+ *
+ *    printAttributesFromTable("album_name", "album");
+ *
+ * @param $attribute  The attribute whos values I’d like to print
+ * @param $table      The table to which the attribute belongs
+ *
+ * @access public
+ * @return void
+ */
 function printAttributesFromTable($attribute, $table) {
     try {
         include_once "includes/config.php";
