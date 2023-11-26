@@ -23,8 +23,8 @@ const MELVINS = 4;
       <h2>Check if a Value Exists in a Table’s Attribute</h2>
       <p><code>function valueExistsInAttribute($value, $attribute, $table)</code></p>
       <hr>
-      <p><strong class="database-query">Query</strong>: Is <i>Dysnomia</i> in my record collection?</p>
-      <p><strong class="database-result">Result</strong>:
+      <p><strong class="database-query">Query</strong> Is <i>Dysnomia</i> in my record collection?</p>
+      <p><strong class="database-result">Result</strong>
         <?php
             if(valueExistsInAttribute("Dysnomia", "album_name", "album")) {
                 echo "According to our database, <i>Dysnomia</i> is in my record collection.";
@@ -38,8 +38,8 @@ const MELVINS = 4;
       <h2>Retrieve all Attribute Values in a Table</h2>
       <p><code>function getAttributeFromTable($attribute, $table)</code></p>
       <hr>
-      <p><strong class="database-query">Query</strong>: Show me all the albums in my record collection?</p>
-      <p><strong class="database-result">Result</strong>:</p>
+      <p><strong class="database-query">Query</strong> Show me all the albums in my record collection?</p>
+      <p><strong class="database-result">Result</strong></p>
       <ul>
         <?php getAttributeFromTable('album_name', 'album'); ?>
       </ul>
@@ -48,8 +48,8 @@ const MELVINS = 4;
       <h2>Retrieve the First Value From a Relation Should a Query Match a Pattern</h2>
       <p><code>function getValue($value, $table, $query, $pattern)</code></p>
       <hr>
-      <p><strong class="database-query">Query</strong>: I have so many albums. Do I own The Melvins’ <i>Houdini</i>?</p>
-      <p><strong class="database-result">Result</strong>:
+      <p><strong class="database-query">Query</strong> I have so many albums. Do I own The Melvins’ <i>Houdini</i>?</p>
+      <p><strong class="database-result">Result</strong>
         <?php
             $albumName = getValue("album_name", "album", "artist_id", MELVINS);
 
@@ -65,8 +65,8 @@ const MELVINS = 4;
       <h2>Update an Attribute</h2>
       <p><code>function updateAttribute($table, $current_attribute, $new_attribute, $query_attribute, $pattern)</code></p>
       <hr>
-      <p><strong class="database-query">Query</strong>: Warpaint’s <i>Heads Up</i> should not be in all caps. Let’s change it to title case.</p>
-      <p><strong class="database-result">Result</strong>:
+      <p><strong class="database-query">Query</strong> Warpaint’s <i>Heads Up</i> should not be in all caps. Let’s change it to title case.</p>
+      <p><strong class="database-result">Result</strong>
         <?php
             updateAttribute("album", "album_name", "Heads Up", "album_name", "HEADS UP");
         ?>
