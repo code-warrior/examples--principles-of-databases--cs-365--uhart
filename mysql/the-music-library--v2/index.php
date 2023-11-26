@@ -16,7 +16,7 @@ const MELVINS = 4;
 </head>
 <body>
   <header>
-    <h1>Working with a XAMP Stack Using a Music Database</h1>
+    <h1>The Music Library — V2<br>(Working with a <abbr title="Any OS, Apache, MySQL, and PHP">XAMP</abbr> Stack Using a Music Database)</h1>
   </header>
   <main>
     <section>
