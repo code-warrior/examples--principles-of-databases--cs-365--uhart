@@ -223,8 +223,9 @@ function printAttributesFromTable($attribute, $table) {
         $statement = null;
 
     } catch(PDOException $error) {
-        echo "<p class='highlight'>The function <code>printAttributesFromTable</code> " .
-            "has generated the following error:</p>" .
+        echo "<p class='highlight'>The function " .
+            "<code>printAttributesFromTable</code> has generated the " .
+            "following error:</p>" .
             "<pre>$error</pre>" .
             "<p class='highlight'>Exiting…</p>";
 
