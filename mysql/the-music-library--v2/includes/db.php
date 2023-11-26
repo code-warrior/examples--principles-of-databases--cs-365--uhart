@@ -119,7 +119,7 @@ function getValue($value, $table, $query, $pattern) {
  *                                    match.
  *
  * @access public
- * @return none
+ * @return void
  */
 function updateAttribute($table, $current_attribute, $new_attribute, $query_attribute, $pattern) {
     try {
@@ -163,7 +163,7 @@ function updateAttribute($table, $current_attribute, $new_attribute, $query_attr
  * @param String $query The entry I care to delete
  *
  * @access public
- * @return none
+ * @return void
  */
 function delete($table, $attribute, $query) {
     try {
