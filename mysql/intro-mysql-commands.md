@@ -712,3 +712,89 @@ And, finally, run the following to view the unciphered passwords:
 ```sql
 SELECT CAST(AES_DECRYPT(password, @key_str, @init_vector) AS CHAR) AS 'Plain Text Password' FROM user;
 ```
+
+---
+
+## Revisit Simple Retrieval
+
+Let’s go back and do a simple retrieval of tuples, in this case, all albums by Mogwai in our `music` database.
+
+```sql
+SELECT album_name
+FROM album, artist
+WHERE artist_name="Mogwai"
+AND
+album.artist_id = artist.artist_id;
+```
+
+---
+
+## Creating a View (Virtual Relations)
+
+Now let’s create a view called “MogwaiAlbums” from the previous query:
+
+```sql
+CREATE VIEW MogwaiAlbums AS
+SELECT album_name
+FROM album, artist
+WHERE artist_name="Mogwai"
+AND
+album.artist_id = artist.artist_id;
+```
+
+---
+
+## Simple Retrieval of a View’s Content
+
+Now, let’s get all of Mogwai’s albums, again, but via the view:
+
+```sql
+SELECT * FROM MogwaiAlbums;
+```
+
+which, incidentally, is equivalent to a sub query (a `SELECT` statement within another `SELECT` statement):
+
+```sql
+SELECT * FROM (
+  SELECT album_name
+  FROM album, artist
+  WHERE artist_name="Mogwai"
+  AND
+  album.artist_id = artist.artist_id
+) AS MogwaiAlbums;
+```
+
+---
+
+## Retrieve the Mogwai album whose name contains “Die”
+
+```sql
+SELECT album_name from MogwaiAlbums WHERE album_name LIKE "%Die%";
+```
+
+---
+
+## Drop a View
+
+```sql
+DROP VIEW IF EXISTS MogwaiAlbums;
+```
+
+## Rename an Attribute
+
+```sql
+CREATE VIEW MogwaiAlbums(Album) AS
+SELECT album_name
+FROM album, artist
+WHERE artist_name="Mogwai"
+AND
+album.artist_id = artist.artist_id;
+```
+
+---
+
+## Retrieve the Mogwai Album Whose Name Contains “Die”, This Time Via the View
+
+```sql
+SELECT Album from MogwaiAlbums WHERE Album LIKE "%Die%";
+```
