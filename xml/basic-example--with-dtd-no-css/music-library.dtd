@@ -16,12 +16,11 @@
 <!ELEMENT artist (album)+>
 
 <!-- ===================================================================
-  An album must contain one title, one genre, one cover, one year, and
-  one or more track elements.
+  An album must contain one title, one cover, one year, and one or more
+  track elements.
   ================================================================== -->
-<!ELEMENT album       (title,genre,cover,year,track+)>
+<!ELEMENT album       (title,cover,year,track+)>
 <!ELEMENT title       (#PCDATA)>
-<!ELEMENT genre       (#PCDATA)>
 <!ELEMENT cover       EMPTY>
 <!ELEMENT year        (#PCDATA)>
 <!ELEMENT track       (track-title,length,composer,comment)>

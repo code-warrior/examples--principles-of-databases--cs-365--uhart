@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?xml-stylesheet type="text/css" href="../css/style.css"?>
+<!DOCTYPE music-library SYSTEM "music-library.dtd">
 
 <music-library>
-  <h1>Music Library</h1>
   <artist name="R.E.M.">
     <album media="vinyl">
       <title>Murmur</title>
@@ -14,7 +13,7 @@
         <track-title>Radio Free Europe</track-title>
         <length>4:05</length>
         <composer>Berry/Buck/Mills/Stipe</composer>
-        <comment /><!-- The empty element, which may also be written as “<comment></comment>” or “<comment/>”. In the current format, the extra space before the forward slash helps894 the reader see that the element is empty. -->
+        <comment /><!-- The empty element, which may also be written as “<comment></comment>” or “<comment/>”. In the current format, the extra space before the forward slash helps the reader see that the element is empty. -->
       </track>
       <track number="2">
         <track-title>Pilgrimage</track-title>
@@ -83,7 +82,7 @@
         <comment>It’s rare for Michael Stipe to have asked a third party for help in writing lyrics.</comment>
       </track>
     </album>
-    <!-- Document -->
+
     <album media="vinyl">
       <title>Document</title>
       <cover filepath="img/document--cover@1x.jpg"
