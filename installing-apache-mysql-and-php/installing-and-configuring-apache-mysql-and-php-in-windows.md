@@ -65,7 +65,7 @@ If you installed PHP via Chocolately, remove it; we’re going to install it man
 
 ## Installing PHP
 
-1. Visit [PHP’s downloads page](https://windows.php.net/download#php-8.2).
+1. Visit [PHP’s downloads page](https://windows.php.net/download#php-8.3).
 2. Download the ZIP archive of the latest *Thread Safe* version of PHP. (The non thread safe version lacks the Apache module we need for this installation.)
 3. Install to `C:\php`.
 4. Edit your Environment Variable to include this new path.
