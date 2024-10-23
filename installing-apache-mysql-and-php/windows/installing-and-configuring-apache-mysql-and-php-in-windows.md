@@ -17,7 +17,7 @@ And, lastly, before you begin, consider starting a scratch file on your desktop,
 
 1. Type `choco install apache-httpd` from the PowerShell to install Apache.
 2. Take all the defaults.
-3. Type `gcm apache-httpd` to retrieve the path to Apache’s binary. Copy the path.
+3. Type `gcm httpd` to retrieve the path to Apache’s binary. Copy the path.
 4. Edit your Environment Variable to include this new path.
 5. Restart the PowerShell.
 6. Type `httpd -k install` to install the primary Apache service.
