@@ -72,8 +72,9 @@ If you installed PHP via Chocolately, remove it; we’re going to install it man
 5. Using the PowerShell, navigate to the `php` folder and locate `php.ini-development`.
 6. Copy this configuration file to the proper name PHP looks for: `cp php.ini-development php.ini`.
 7. Find the entry for the PHP Data Object/MySQL extension: `;extension=pdo_mysql`. Uncomment it by removing the `;`.
-8. Bounce the server: `httpd -k stop; httpd -k start`, or simply `httpd -k restart`.
-9. Launch Firefox and type [`http://localhost/info.php`](http://localhost/info.php). If the installation and configuration of PHP worked, then you would see a web page consisting of a long table with configuration entries. Otherwise, you’d see the contents of `info.php` as plain text in the browser, or your browser would ask you to download the file. Either of these last two events indicates that PHP is not communicating with Apache. Retrace the steps in this installation tutorial.
+8. Restart your computer.
+9. Bounce the server: `httpd -k stop; httpd -k start`, or simply `httpd -k restart`.
+10. Launch Firefox and type [`http://localhost/info.php`](http://localhost/info.php). If the installation and configuration of PHP worked, then you would see a web page consisting of a long table with configuration entries. Otherwise, you’d see the contents of `info.php` as plain text in the browser, or your browser would ask you to download the file. Either of these last two events indicates that PHP is not communicating with Apache. Retrace the steps in this installation tutorial.
 
 ---
 
