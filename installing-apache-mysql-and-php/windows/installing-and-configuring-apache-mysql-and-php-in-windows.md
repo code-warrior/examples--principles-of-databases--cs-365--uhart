@@ -26,28 +26,33 @@ And, lastly, before you begin, consider starting a scratch file on your desktop,
 9. Create a new file called `info.php`, then add `<?php echo phpinfo();`. Save it. We’ll need this file during the PHP installation phase later.
 10. From Apache’s `conf` folder, open `httpd.conf` in your editor.
 11. Locate the the following configuration section:
-```apache
-<IfModule dir_module>
-  DirectoryIndex index.html
-</IfModule>
-```
-Precede `index.html` with `index.php`, so it looks like:
-```apache
-<IfModule dir_module>
-  DirectoryIndex index.php index.html
-</IfModule>
-```
+
+    ```apache
+    <IfModule dir_module>
+      DirectoryIndex index.html
+    </IfModule>
+    ```
+
+    Precede `index.html` with `index.php`, so it looks like:
+
+    ```apache
+    <IfModule dir_module>
+      DirectoryIndex index.php index.html
+    </IfModule>
+    ```
+
 12. In the same `httpd.conf` file, add the following to the end of the file, assuming PHP is in `C:\php`:
-```php
-# PHP8 module
-PHPIniDir "C:/php"
-LoadModule php_module "C:/php/php8apache2_4.dll"
-AddType application/x-httpd-php .php
-```
-**Note**: The forward slashes are *not* a typo.
 
-13. Open Firefox and type `localhost` in the address bar. You might be told that the connection isn’t secure. Ignore the warning and continue to the _localhost_ site.
+    ```php
+    # PHP8 module
+    PHPIniDir "C:/php"
+    LoadModule php_module "C:/php/php8apache2_4.dll"
+    AddType application/x-httpd-php .php
+    ```
 
+    **Note**: The forward slashes are *not* a typo.
+
+13. Open Firefox and type `localhost` in the address bar. You might be told that the connection isn’t secure. Ignore the warning and continue to the *localhost* site.
 14. In the PowerShell, type `httpd -V` to see some important configuration settings for your Apache server.
 
 ---
