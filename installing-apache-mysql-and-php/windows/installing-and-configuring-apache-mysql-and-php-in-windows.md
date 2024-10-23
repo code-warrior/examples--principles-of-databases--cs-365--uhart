@@ -82,4 +82,4 @@ If you installed PHP via Chocolately, remove it; we’re going to install it man
 
 1. Launch your PowerShell.
 2. Navigate to your `htdocs` directory within Apache.
-3. Clone the test app we’ll need: `git clone git@bitbucket.org:code-warrior/web-app`.
+3. Clone the test app we’ll need from [https://bitbucket.org/code-warrior/web-app/src/master/](https://bitbucket.org/code-warrior/web-app/src/master/).
