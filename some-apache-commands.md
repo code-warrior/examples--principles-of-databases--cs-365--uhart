@@ -1,6 +1,6 @@
 # Some Apache-Related Commands
 
-The following commands will likely require you to prepend each command with `sudo`, which means you’ll need the current user’s password, assuming the current user has admin privileges.
+The following commands will work in macOS and Cygwin environments. If you’re working in macOS, you’ll likely need to prepend each command below with `sudo`, meaning you’ll need the current user’s password, assuming the current user has admin privileges.
 
 ## Locate the Apache Binary
 
