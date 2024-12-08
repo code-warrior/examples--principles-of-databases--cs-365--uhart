@@ -28,6 +28,8 @@ Pay attention to the the `caveats` that Homebrew informs you about once the inst
 
 ## Configure Apache
 
+**Note**: You will be asked repeatedly for the password associated with the current user anytime you save `httpd.conf`, starting with step 2 below.
+
 ### 1. Put `/etc/apache2` under Git control
 
 ### 2. Open `/etc/apache2/httpd.conf` in an editor
