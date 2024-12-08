@@ -166,4 +166,22 @@ sudo apachectl graceful
 
 ---
 
+## Notes
+
+### Something Broken?
+
 If something’s not working, retrace your steps. If you find a mistake, file an issue on GitHub.
+
+### Access and Errors
+
+It’s imperative that you’re aware of access and error records thrown in real time by the server. The files `error_log` and `access_log` are in `/var/log/apache2`. Run the `tail` command on each file within two separate CLI windows:
+
+```bash
+tail -f /var/log/apache2/access_log
+```
+
+and
+
+```bash
+tail -f /var/log/apache2/error_log
+```
