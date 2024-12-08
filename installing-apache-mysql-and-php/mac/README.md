@@ -81,9 +81,7 @@ See the [Apache-Related Commands](some-apache-commands.md) file for more command
 
 ## Configure Apache to Work With a Home Directory
 
-### 1. Open `/etc/apache2/httpd.conf` in an editor
-
-Steps 2–5 require that you edit the file `httpd.conf` in `/etc/apache2`. **Note**: You will be asked repeatedly for the password associated with the current user to edit the file.
+### 1. Again, open `/etc/apache2/httpd.conf` in an editor
 
 ### 2. Enable Home Directories
 
