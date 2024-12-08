@@ -2,6 +2,8 @@
 
 This tutorial configures the pre-installed version of Apache in macOS, MySQL 9.0.1 (downloaded externally), and PHP 8.3 (downloaded via Homebrew) on macOS Ventura (13.7)
 
+**Note**: This was also tested in macOS Monterey (12.7.6) running version 8.03 of MySQL.
+
 ---
 
 ## Install MySQL
