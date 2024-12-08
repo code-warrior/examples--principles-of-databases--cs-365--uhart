@@ -20,7 +20,7 @@ Use Homebrew to install PHP:
 brew install php
 ```
 
-Pay attention to the the `caveats` that Homebrew informs you about once the installation is complete. Consider taking a screen shot (similar to [this screen shot](images/homebrew-php-caveats-screen-capture.png)) in the event that information in this tutorial differs from your installation.
+Pay attention to the the `caveats` that Homebrew informs you about once the installation is complete. If you miss it, run `brew info php` at anytime to retrieve that info.
 
 ---
 
