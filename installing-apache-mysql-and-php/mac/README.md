@@ -1,6 +1,6 @@
 # Configure Apache, MySQL, and PHP on macOS Ventura
 
-This tutorial configures the pre-installed version of Apache in macOS, MySQL 9.0.1 (downloaded externally), and PHP 8.3 (downloaded via Homebrew) on macOS Ventura (13.7)
+This tutorial will walk you through the installation of a LAMP stack for macOS Ventura (13.7). We’ll configure the pre-installed version of Apache, download and configure MySQL 9.0.1 from Oracle, and then install and configure PHP 8.3 via Homebrew.
 
 **Note**: This was also tested in macOS Monterey (12.7.6) running version 8.03 of MySQL.
 
@@ -10,19 +10,21 @@ This tutorial configures the pre-installed version of Apache in macOS, MySQL 9.0
 
 Download the Community Server version of MySQL (version 9.1 as of this writing) from [MySQL Community Downloads](https://dev.mysql.com/downloads/mysql/). Choose the **DMG Archive** version of the installer for the chip on your machine: **x86, 64-bit** for Intel chips; **ARM, 64-bit** for the Apple M1, M2, and M3 chips. Make sure to take all the defaults during the installation process.
 
-Once you’re done installing MySQL, log in as root and run the `status` command. Ensure that `Server characterset`, `Db characterset`, `Client characterset`, and `Conn. characterset` are all set to `utf8mb4`.
+You should have access to MySQL from The Terminal. Check before you proceed: Launch The Terminal, then type `which mysql`. Your response should be akin to, `/usr/local/mysql/bin/mysql`. If the response is `not found`, then look at the MySQL entry in `System Settings`. The path to the MySQL binaries appears under the large version number on the right.
+
+Launch The Terminal and log in as `root`, then run the `status` command. Ensure that `Server characterset`, `Db characterset`, `Client characterset`, and `Conn. characterset` are all set to `utf8mb4`.
 
 ---
 
 ## Install PHP
 
-Use Homebrew to install PHP:
+Use [Homebrew](https://brew.sh/) to install PHP:
 
 ```bash
 brew install php
 ```
 
-Pay attention to the the `caveats` that Homebrew informs you about once the installation is complete. If you miss it, run `brew info php` at anytime to retrieve that info.
+**Note**: Pay attention to the the `caveats` page at the conclusion of the installation. It contains paths you’ll need in a future step. If you miss it, run `brew info php` at anytime to retrieve the caveats info.
 
 ---
 
@@ -30,7 +32,7 @@ Pay attention to the the `caveats` that Homebrew informs you about once the inst
 
 **Note**: You will be asked repeatedly for the password associated with the current user anytime you save `httpd.conf`, starting with step 2 below.
 
-### 1. Put `/etc/apache2` under Git control
+### 1. Put `/etc/apache2` under Git control: `sudo git init`
 
 ### 2. Open `/etc/apache2/httpd.conf` in an editor
 
@@ -83,10 +85,9 @@ See the [Apache-Related Commands](some-apache-commands.md) file for more command
 
 ### 1. Again, open `/etc/apache2/httpd.conf` in an editor
 
-### 2. Enable Home Directories
+### 2. Enable User Home Directories
 
-Enable home directories by locating the following commented line in
-`httpd.conf`, then uncommenting it:
+Enable user home directories by uncommenting the following line:
 
 ```apacheconf
 #Include /private/etc/apache2/extra/httpd-userdir.conf
@@ -101,6 +102,8 @@ Uncomment the following line:
 ```apacheconf
 LoadModule userdir libexec/apache2/mod_userdir.so
 ```
+
+In Sequoia it’s `LoadModule userdir_module libexec/apache2/mod_userdir.so`
 
 Save the file.
 
@@ -119,7 +122,7 @@ Save the file. This is the last change to `httpd.conf`, so you may now close it.
 
 ### 5. Enable The Sites Folder
 
-Open `etc/apache2/extra/httpd-userdir.conf` in your editor, then uncomment the
+Open `/etc/apache2/extra/httpd-userdir.conf` in your editor, then uncomment the
 line:
 
 ```apacheconf
