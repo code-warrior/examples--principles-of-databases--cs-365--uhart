@@ -177,7 +177,7 @@ If something’s not working, retrace your steps. If you find a mistake, file an
 
 ### Access and Errors
 
-It’s imperative that you’re aware of access and error records thrown in real time by the server. The files `error_log` and `access_log` are in `/var/log/apache2`. Run the `tail` command on each file within two separate CLI windows:
+It’s imperative that you be aware of access and error events thrown by the server in real time. The `access_log` and `error_log` files where these events are logged are in `/var/log/apache2`. Run the `tail` command on each file within two separate CLI windows:
 
 ```bash
 tail -f /var/log/apache2/access_log
