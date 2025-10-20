@@ -147,7 +147,7 @@ sudo touch $(whoami).conf
 Now edit the file, adding the following and replacing `ENTER_SHORT_USER_NAME_HERE` with your short name:
 
 ```apacheconf
-<Directory "/Users/ENTER_SHORT_USER_NAME_HERE/Sites/"> 
+<Directory "/Users/ENTER_SHORT_USER_NAME_HERE/Sites/">
     AddLanguage en .en
     AddHandler cgi-script .cgi .php
     Options Indexes MultiViews FollowSymLinks ExecCGI
