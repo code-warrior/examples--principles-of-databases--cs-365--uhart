@@ -188,3 +188,12 @@ and
 ```bash
 tail -f /var/log/apache2/error_log
 ```
+
+---
+
+## Stand up the Test App
+
+1. Launch The Terminal.
+2. Navigate to your `Sites` directory.
+3. Clone the test app we’ll need from [https://bitbucket.org/code-warrior/web-app/src/master/](https://bitbucket.org/code-warrior/web-app/src/master/).
+4. Follow it’s directions.
