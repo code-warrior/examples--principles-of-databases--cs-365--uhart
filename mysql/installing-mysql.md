@@ -21,6 +21,20 @@ installation, mysql, windows, 10, macos, monterey, command line interface, cli, 
 15. Finally, let’s launch MySQL using our new root password: `mysql -u root -p`
 16. Type `status` to see important, MySQL-related info, such as the user who is logged in, the host on which they’re connected, and the character sets being used.
 
+### Noting the Flags and Options Launched by the MySQL Binary Shortcut
+
+1. Type the key with the Windows® logo + R.
+2. Enter `services.msc`.
+3. Locate `MySQL` then context-click it.
+4. Choose `Properties` and note the *Path to executable:*, which will include `mysql.exe` or `mysqld.exe`.
+
+### Starting/Stopping the MySQL Service from the PowerShell
+
+The following assumes you have MySQL 8.1
+
+1. Run `net stop MYSQL81` to stop MySQL
+2. Run `net start MYSQL81` to start it
+
 ---
 
 ## macOS Ventura
