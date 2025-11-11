@@ -83,6 +83,28 @@ If you installed PHP via Chocolately, remove it; we’re going to install it man
 
 ---
 
+## Notes
+
+### Something Broken?
+
+If something’s not working, retrace your steps. If you find a mistake, file an issue on GitHub.
+
+### Access and Error Logs
+
+It’s imperative that you be aware of access and error events thrown by the server in real time. The `access.log` and `error.log` files where these events are logged are usually in `Apachex.xx\logs`. Run `gcm httpd` to get the path to `Apachex.xx` folder, then navigate to the `logs` folder. Run the `tail` command from Cygwin or PowerShell on each file within two separate CLI windows:
+
+```bash
+tail -f access.log
+```
+
+and
+
+```bash
+tail -f error.log
+```
+
+---
+
 ## Stand up the Test App
 
 1. Launch your PowerShell.
