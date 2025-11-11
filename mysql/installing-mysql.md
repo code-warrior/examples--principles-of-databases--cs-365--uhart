@@ -2,7 +2,7 @@ installation, mysql, windows, 10, macos, monterey, command line interface, cli, 
 
 # Installing MySQL
 
-## Windows 10
+## Windows 10/11
 
 1. Visit the [MySQL Community Downloads Page](https://dev.mysql.com/downloads/mysql/). As of 24 September 2023, 8.1.0 Innovation is the latest version.
 2. Choose to download `(mysql-8.1.0-winx64.msi)`, which should be about 146.9MB
