@@ -91,7 +91,9 @@ If something’s not working, retrace your steps. If you find a mistake, file an
 
 ### Access and Error Logs
 
-It’s imperative that you be aware of access and error events thrown by the server in real time. The `access.log` and `error.log` files where these events are logged are usually in `Apachex.xx\logs`. Run `gcm httpd` to get the path to `Apachex.xx` folder, then navigate to the `logs` folder. Run the `tail` command from Cygwin or PowerShell on each file within two separate CLI windows:
+It’s imperative that you be aware of access and error events thrown by the server in real time. The `access.log` and `error.log` files where these events are logged are usually in `Apachexx\logs`. Run `gcm httpd` to get the path to `Apachexx` folder, then navigate to the `logs` folder.
+
+In Cygwin, run the `tail` command on each file within two separate CLI windows:
 
 ```bash
 tail -f access.log
@@ -101,6 +103,18 @@ and
 
 ```bash
 tail -f error.log
+```
+
+In PowerShell, run the following:
+
+```bash
+Get-Content -last 10 -Wait access.log
+```
+
+and
+
+```bash
+Get-Content -last 10 -Wait error.log
 ```
 
 ---
