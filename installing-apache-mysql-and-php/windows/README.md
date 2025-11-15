@@ -91,7 +91,7 @@ If something’s not working, retrace your steps. If you find a mistake, file an
 
 ### Access and Error Logs
 
-It’s imperative that you be aware of access and error events thrown by the server in real time. The `access.log` and `error.log` files where these events are logged are usually in `Apachexx\logs`. Run `gcm httpd` to get the path to `Apachexx` folder, then navigate to the `logs` folder.
+It’s imperative that you be aware of access and error events thrown by the server in real time. The `access.log` and `error.log` files where these events are logged are usually in `Apachexx\logs`. Whether you’re using Windows 10 or 11, run `gcm httpd` to get the path to `Apachexx` folder, then navigate to the `logs` folder.
 
 In Cygwin, run the `tail` command on each file within two separate CLI windows:
 
