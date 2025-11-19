@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Update | CRUD Operations Using MongoDB, Express, Node, and Nunjucks</title>
+  {% include 'blocks/css/display-font.njk' %}
+  {% include 'blocks/css/reading-font.njk' %}
+  {% include 'blocks/css/font-awesome-css.njk' %}
+  {% include 'blocks/css/main-css.njk' %}
+</head>
+<body>
+  <header>
+    <h1>Update</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="/">🏠</a></li>
+      <li><a href="/create-a-db-record/">Create</a></li>
+      <li><a href="/read-a-db-record/">Read</a></li>
+      <li><a class="current" href="/update-a-db-record/">Update</a></li>
+      <li><a href="/delete-a-db-record/">Delete</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section style="text-align: center;">
+      <h2>Update a Record in the Database</h2>
+      <form action="/update-a-db-record" method="POST">
+        <div>
+          <select autofocus name="name" class="select-css">
+            <option selected>Select a user whose password you’d like to update</option>
+              {%- for entry in mongoDBArray -%}
+            <option value="{{ entry.name }}">{{ entry.name }}</option>
+              {%- endfor %}
+          </select>
+        </div>
+        <div><input type="password" placeholder="Enter a new password here" name="password"></div>
+        <div><button type="submit">Submit</button></div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

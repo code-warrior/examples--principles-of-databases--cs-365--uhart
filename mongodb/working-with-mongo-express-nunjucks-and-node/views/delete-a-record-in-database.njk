@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delete | CRUD Operations Using MongoDB, Express, Node, and Nunjucks</title>
+  {% include 'blocks/css/display-font.njk' %}
+  {% include 'blocks/css/reading-font.njk' %}
+  {% include 'blocks/css/font-awesome-css.njk' %}
+  {% include 'blocks/css/main-css.njk' %}
+</head>
+<body>
+  <header>
+    <h1>Delete</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="/">🏠</a></li>
+      <li><a href="/create-a-db-record/">Create</a></li>
+      <li><a href="/read-a-db-record/">Read</a></li>
+      <li><a href="/update-a-db-record/">Update</a></li>
+      <li><a class="current" href="/delete-a-db-record/">Delete</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section style="text-align: center;">
+      <h2>Delete a Record in the Database</h2>
+      <form action="/delete-a-db-record" method="POST">
+        <div>
+          <select autofocus name="name" class="select-css">
+            <option selected>Select a user you’d like to delete</option>
+            {%- for entry in mongoDBArray -%}
+            <option value="{{ entry.name }}">{{ entry.name }}</option>
+            {%- endfor %}
+          </select>
+        </div>
+        <div><button type="submit">Submit</button></div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

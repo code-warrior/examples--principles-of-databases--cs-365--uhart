@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Read | CRUD Operations Using MongoDB, Express, Node, and Nunjucks</title>
+  {% include 'blocks/css/display-font.njk' %}
+  {% include 'blocks/css/reading-font.njk' %}
+  {% include 'blocks/css/font-awesome-css.njk' %}
+  {% include 'blocks/css/main-css.njk' %}
+</head>
+<body>
+  <header>
+    <h1>Read</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="/">🏠</a></li>
+      <li><a href="/create-a-db-record/">Create</a></li>
+      <li><a class="current" href="/read-a-db-record/">Read</a></li>
+      <li><a href="/update-a-db-record/">Update</a></li>
+      <li><a href="/delete-a-db-record/">Delete</a></li>
+    </ul>
+  </nav>
+  <main>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">Users</th>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <th>Password</th>
+        </tr>
+      </thead>
+      <tbody>
+        {%- for item in mongoDBArray -%}
+        <tr>
+          <td>{{ item.name }}</td><td>{{ item.password }}</td>
+        </tr>
+        {%- endfor %}
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>

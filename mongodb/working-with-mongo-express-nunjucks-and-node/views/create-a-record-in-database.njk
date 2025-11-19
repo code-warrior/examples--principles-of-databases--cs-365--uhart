@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create | CRUD Operations Using MongoDB, Express, Node, and Nunjucks</title>
+  {% include 'blocks/css/display-font.njk' %}
+  {% include 'blocks/css/reading-font.njk' %}
+  {% include 'blocks/css/font-awesome-css.njk' %}
+  {% include 'blocks/css/main-css.njk' %}
+</head>
+<body>
+  <header>
+    <h1>Create</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="/">🏠</a></li>
+      <li><a class="current" href="/create-a-db-record/">Create</a></li>
+      <li><a href="/read-a-db-record/">Read</a></li>
+      <li><a href="/update-a-db-record/">Update</a></li>
+      <li><a href="/delete-a-db-record/">Delete</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section>
+      <h2>Create/Insert a New Record Into the Database</h2>
+      <form action="/create-a-db-record" method="POST">
+        <input autofocus type="text" placeholder="name" name="name">
+        <input type="password" placeholder="password" name="password">
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
