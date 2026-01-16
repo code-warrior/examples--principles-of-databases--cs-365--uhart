@@ -164,8 +164,8 @@ sudo apachectl graceful
 
 ### 9. Visit `localhost`
 
-1. Open a browser and point it to `localhost`. It should say that “It Works!”.
-2. Repoint your browser to `localhost/~YOUR_USERNAME`, where `YOUR_USERNAME` is your Mac’s short name. It should say “Index of /”.
+1. Open a browser and point it at `localhost`, making sure the address bar uses `http` and not `https`. It should say, “It Works!”
+2. Repoint your browser to `localhost/~YOUR_USERNAME`, where `YOUR_USERNAME` is your Mac’s short name. It should say “Index of /”
 
 ---
 
