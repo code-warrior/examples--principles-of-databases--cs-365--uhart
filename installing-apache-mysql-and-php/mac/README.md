@@ -24,7 +24,7 @@ Use [Homebrew](https://brew.sh/) to install PHP:
 brew install php
 ```
 
-**Note**: Pay attention to the the `caveats` page at the conclusion of the installation. It contains paths you’ll need in a future step. If you miss it, run `brew info php` at anytime to retrieve the caveats info.
+**Note**: Pay attention to the `caveats` page at the conclusion of the installation. It contains paths you’ll need in a future step. If you miss it, run `brew info php` at anytime to retrieve the caveats info.
 
 ---
 
